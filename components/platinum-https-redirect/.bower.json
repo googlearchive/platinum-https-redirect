@@ -1,0 +1,47 @@
+{
+  "name": "platinum-https-redirect",
+  "authors": [
+    "The Polymer Authors"
+  ],
+  "description": "Force a redirect to HTTPS when not on a local web server.",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/PolymerElements/platinum-https-redirect",
+  "keywords": [
+    "https",
+    "polymer",
+    "web-component",
+    "web-components"
+  ],
+  "main": [
+    "platinum-https-redirect.html"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/platinum-https-redirect.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  },
+  "_release": "21c27b8bc3",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "21c27b8bc3d793ec93ada599a2d63d5fd14f9a7c"
+  },
+  "_source": "git://github.com/PolymerElements/platinum-https-redirect.git",
+  "_target": "master",
+  "_originalSource": "PolymerElements/platinum-https-redirect",
+  "_direct": true
+}
