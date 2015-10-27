@@ -13,9 +13,7 @@
     "web-component",
     "web-components"
   ],
-  "main": [
-    "platinum-https-redirect.html"
-  ],
+  "main": "platinum-https-redirect.html",
   "private": true,
   "repository": {
     "type": "git",
