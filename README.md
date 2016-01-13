@@ -7,13 +7,15 @@ platinum-https-redirect.html
 Edit those files, and our readme bot will duplicate them over here!
 Edit this file, and the bot will squash your changes :)
 
+The bot does some handling of markdown. Please file a bug if it does the wrong
+thing! https://github.com/PolymerLabs/tedium/issues
+
 -->
 
 _[Demo and API Docs](https://elements.polymer-project.org/elements/platinum-https-redirect)_
 
 
 ##&lt;platinum-https-redirect&gt;
-
 
 The `<platinum-https-redirect>` element redirects the current page to HTTPS, unless the page is
 loaded from a web server running on `localhost`.
@@ -37,6 +39,8 @@ with an exception to support local web servers.
 
 It can be used by just adding it to any page, e.g.
 
-    <platinum-https-redirect></platinum-https-redirect>
+```html
+<platinum-https-redirect></platinum-https-redirect>
+```
 
 
