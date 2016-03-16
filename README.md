@@ -12,6 +12,8 @@ thing! https://github.com/PolymerLabs/tedium/issues
 
 -->
 
+[![Build status](https://travis-ci.org/PolymerElements/platinum-https-redirect.svg?branch=master)](https://travis-ci.org/PolymerElements/platinum-https-redirect)
+
 _[Demo and API docs](https://elements.polymer-project.org/elements/platinum-https-redirect)_
 
 
