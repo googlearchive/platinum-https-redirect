@@ -14,7 +14,6 @@
     "web-components"
   ],
   "main": "platinum-https-redirect.html",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/PolymerElements/platinum-https-redirect.git"
