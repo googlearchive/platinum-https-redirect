@@ -1,6 +1,6 @@
 {
   "name": "platinum-https-redirect",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "authors": [
     "The Polymer Authors"
   ],
@@ -27,10 +27,20 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0"
+    "polymer": "Polymer/polymer#2.0-preview"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "web-component-tester": "^4.0.0"
+    "iron-component-page": "PolymerElements/iron-component-page#2.0-preview",
+    "web-component-tester": "v6.0.0-prerelease.5"
+  },
+  "variants": {
+    "1.x": {
+      "dependencies": {
+        "polymer": "Polymer/polymer#^1.1.0"
+      },
+      "devDependencies": {
+        "iron-component-page": "PolymerElements/iron-component-page#^1.0.0"
+      }
+    }
   }
 }
