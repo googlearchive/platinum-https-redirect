@@ -18,9 +18,9 @@ matrix:
             wct -s 'default'
           fi
 before_script:
-  - npm install -g bower polylint web-component-tester
-  - bower install
-  - polylint
+  - npm install -g polymer-cli web-component-tester
+  - polymer install
+  - polymer lint
 env:
   global:
     - secure: >-

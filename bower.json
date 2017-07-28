@@ -1,8 +1,9 @@
 {
   "name": "platinum-https-redirect",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "authors": [
-    "The Polymer Authors"
+    "The Polymer Authors",
+    "Paul Gestwicki"
   ],
   "description": "Force a redirect to HTTPS when not on a local web server.",
   "license": "http://polymer.github.io/LICENSE.txt",
@@ -27,10 +28,11 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0"
+    "polymer": "Polymer/polymer#^2.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "web-component-tester": "^4.0.0"
+    "iron-component-page": "PolymerElements/iron-component-page#^3.0.1",
+    "web-component-tester": "^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
   }
 }
