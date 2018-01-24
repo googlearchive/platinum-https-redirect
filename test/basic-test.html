@@ -13,54 +13,55 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../../@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../../wct-browser-legacy/browser.js"></script>
 
-    <link rel="import" href="../platinum-https-redirect.html">
+    <script type="module" src="../platinum-https-redirect.js"></script>
   </head>
 
   <body>
-    <script>
-      suite('<platinum-https-redirect>', function() {
-        document.addEventListener('WebComponentsReady', function() {
-          var platinumHttpsRedirect = document.createElement('platinum-https-redirect');
+    <script type="module">
+import '../platinum-https-redirect.js';
+suite('<platinum-https-redirect>', function() {
+  document.addEventListener('WebComponentsReady', function() {
+    var platinumHttpsRedirect = document.createElement('platinum-https-redirect');
 
-          test('_isLocalhost(valid) results in true', function() {
-            var validLocalhostValues = [
-              'localhost',
-              '127.0.0.1',
-              '127.255.255.255',
-              '[::1]'
-            ];
+    test('_isLocalhost(valid) results in true', function() {
+      var validLocalhostValues = [
+        'localhost',
+        '127.0.0.1',
+        '127.255.255.255',
+        '[::1]'
+      ];
 
-            validLocalhostValues.forEach(function(hostname) {
-              // Check for explicit true and not just truthiness.
-              assert.strictEqual(platinumHttpsRedirect._isLocalhost(hostname), true,
-                hostname + ' should be considered localhost');
-            });
-          });
-
-          test('_isLocalhost(invalid) results in false', function() {
-            var invalidLocalhostValues = [
-              '',
-              'example.com',
-              'localhost.net',
-              'ocalhost',
-              '127.256.256.256',
-              '::1',
-              '[::2]',
-              '[::',
-              '192.168.1.1'
-            ];
-
-            invalidLocalhostValues.forEach(function(hostname) {
-              // Check for explicit false and not just falsiness.
-              assert.strictEqual(platinumHttpsRedirect._isLocalhost(hostname), false,
-                hostname + ' should not be considered localhost');
-            });
-          });
-        });
+      validLocalhostValues.forEach(function(hostname) {
+        // Check for explicit true and not just truthiness.
+        assert.strictEqual(platinumHttpsRedirect._isLocalhost(hostname), true,
+          hostname + ' should be considered localhost');
       });
-    </script>
+    });
+
+    test('_isLocalhost(invalid) results in false', function() {
+      var invalidLocalhostValues = [
+        '',
+        'example.com',
+        'localhost.net',
+        'ocalhost',
+        '127.256.256.256',
+        '::1',
+        '[::2]',
+        '[::',
+        '192.168.1.1'
+      ];
+
+      invalidLocalhostValues.forEach(function(hostname) {
+        // Check for explicit false and not just falsiness.
+        assert.strictEqual(platinumHttpsRedirect._isLocalhost(hostname), false,
+          hostname + ' should not be considered localhost');
+      });
+    });
+  });
+});
+</script>
   </body>
 </html>

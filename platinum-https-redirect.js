@@ -1,4 +1,5 @@
-<!--
+import '../polymer/polymer.js';
+/**
 @license
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
@@ -6,10 +7,8 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<link rel="import" href="../polymer/polymer.html">
-
-<!--
+*/
+/**
 The `<platinum-https-redirect>` element redirects the current page to HTTPS, unless the page is
 loaded from a web server running on `localhost`.
 
@@ -37,27 +36,23 @@ It can be used by just adding it to any page, e.g.
 @group Platinum Elements
 @element platinum-https-redirect
 @demo demo/index.html
--->
-<dom-module id="platinum-https-redirect">
-  <script>
-    Polymer({
-      is: 'platinum-https-redirect',
+*/
+Polymer({
+  is: 'platinum-https-redirect',
 
-      _isLocalhost: function(hostname) {
-        // !! coerces the logical expression to evaluate to the values true or false.
-        return !!(hostname === 'localhost' ||
-                  // [::1] is the IPv6 localhost address.
-                  hostname === '[::1]' ||
-                  // 127.0.0.1/8 is considered localhost for IPv4.
-                  hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
-      },
+  _isLocalhost: function(hostname) {
+    // !! coerces the logical expression to evaluate to the values true or false.
+    return !!(hostname === 'localhost' ||
+              // [::1] is the IPv6 localhost address.
+              hostname === '[::1]' ||
+              // 127.0.0.1/8 is considered localhost for IPv4.
+              hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
+  },
 
-      attached: function() {
-        if (window.location.protocol === 'http:' && !this._isLocalhost(window.location.hostname)) {
-          // Redirect to https: if we're currently using http: and we're not on localhost.
-          window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-        }
-      }
-    });
-  </script>
-</dom-module>
+  attached: function() {
+    if (window.location.protocol === 'http:' && !this._isLocalhost(window.location.hostname)) {
+      // Redirect to https: if we're currently using http: and we're not on localhost.
+      window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    }
+  }
+});
